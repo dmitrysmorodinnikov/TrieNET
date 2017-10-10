@@ -25,7 +25,6 @@ namespace TrieNETProject
                 var node = AddCh(w[i], false, curr);
                 curr = node;
             }
-            //add last char
             AddCh(w.Last(), true, curr);
         }
 
@@ -40,12 +39,31 @@ namespace TrieNETProject
 
         public bool ContainsWord(string word)
         {
-            throw new NotImplementedException();    
+            var curr = Root;
+            foreach (var ch in word)
+            {
+                curr = ChInTrie(ch, curr);
+                if (curr == null)
+                    return false;
+            }
+            return curr.EndOfWord;
         }
 
         public bool ContainsPrefix(string prefix)
         {
-            throw new NotImplementedException();
+            var curr = Root;
+            foreach (var ch in prefix)
+            {
+                curr = ChInTrie(ch, curr);
+                if (curr == null)
+                    return false;
+            }
+            return true;
+        }
+
+        private TrieNode ChInTrie(char ch, TrieNode curr)
+        {
+            return curr.Children.ContainsKey(ch) ? curr.Children[ch] : null;
         }
     }
 }
