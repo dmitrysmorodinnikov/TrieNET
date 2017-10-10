@@ -22,27 +22,6 @@ namespace TrieNETProject
             EndOfWord = isLast;
         }
 
-        public void Add(string w, TrieNode root)
-        {
-            if(string.IsNullOrEmpty(w))
-                return;
-            TrieNode curr = root;
-            for (int i = 0; i < w.Length - 1; i++)
-            {
-                var node = AddCh(w[i], false, curr);
-                curr = node;
-            }
-            //add last char
-            AddCh(w.Last(), true, curr);
-        }
-
-        private TrieNode AddCh(char ch, bool isLast, TrieNode curr)
-        {
-            if (curr.Children.ContainsKey(ch))
-                return curr.Children[ch];
-            var trieNode = new TrieNode(isLast);
-            curr.Children.Add(ch, trieNode);
-            return trieNode;
-        }
+        
     }
 }

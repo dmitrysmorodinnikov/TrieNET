@@ -15,14 +15,32 @@ namespace TrieNETProject
             Root = root;
         }
 
-        public void Add(string word)
+        public void Add(string w)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(w))
+                return;
+            TrieNode curr = Root;
+            for (int i = 0; i < w.Length - 1; i++)
+            {
+                var node = AddCh(w[i], false, curr);
+                curr = node;
+            }
+            //add last char
+            AddCh(w.Last(), true, curr);
+        }
+
+        private TrieNode AddCh(char ch, bool isLast, TrieNode curr)
+        {
+            if (curr.Children.ContainsKey(ch))
+                return curr.Children[ch];
+            var trieNode = new TrieNode(isLast);
+            curr.Children.Add(ch, trieNode);
+            return trieNode;
         }
 
         public bool ContainsWord(string word)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();    
         }
 
         public bool ContainsPrefix(string prefix)
