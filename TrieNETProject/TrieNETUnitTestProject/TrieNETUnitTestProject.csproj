@@ -51,7 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="TestTries.cs" />
-    <Compile Include="CreationTests\UnitTest1.cs" />
+    <Compile Include="InsertionTests\InsertionTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +63,6 @@
   <ItemGroup>
     <Folder Include="ContainsPrefixTests\" />
     <Folder Include="ContainsWordTests\" />
-    <Folder Include="InsertionTests\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
