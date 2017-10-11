@@ -53,6 +53,7 @@
     <Compile Include="ContainsPrefixTests\ContainsPrefixTest3.cs" />
     <Compile Include="ContainsPrefixTests\ContainsPrefixTest2.cs" />
     <Compile Include="ContainsPrefixTests\ContainsPrefixTest1.cs" />
+    <Compile Include="ContainsWordTests\ContainsWordTest1.cs" />
     <Compile Include="InsertionTests\InsertionTest3.cs" />
     <Compile Include="InsertionTests\InsertionTest2.cs" />
     <Compile Include="TestTries.cs" />
@@ -65,9 +66,7 @@
       <Name>TrieNET</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ContainsWordTests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
