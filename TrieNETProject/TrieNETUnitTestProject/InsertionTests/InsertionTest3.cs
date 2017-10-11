@@ -14,7 +14,7 @@ namespace TrieNETUnitTestProject
         public void Init()
         {
             var root = new TrieNode();
-            ActualTrie = new Trie(root);
+            ActualTrie = new Trie();
             ActualTrie.Add("abc");
             ActualTrie.Add("abgl");
             ActualTrie.Add("cdf");

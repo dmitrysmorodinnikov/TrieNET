@@ -8,12 +8,17 @@ namespace TrieNETProject
 {
     public class Trie : ITrie
     {
-        public TrieNode Root { get; private set; }
+        public TrieNode Root { get; }
 
-        public Trie(TrieNode root)
+        public Trie()
         {
-            Root = root;
+            Root = new TrieNode();
         }
+
+        //public Trie(TrieNode root)
+        //{
+        //    Root = root;
+        //}
 
         public void Add(string w)
         {

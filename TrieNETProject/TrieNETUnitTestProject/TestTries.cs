@@ -31,35 +31,35 @@ namespace TrieNETUnitTestProject
 
         private static Trie Create1()//"abc"
         {
-            var root = new TrieNode();
+            var trie = new Trie();
             var bTrieNode = new TrieNode();
             var cTrieNode = new TrieNode();
             var endTrieNode = new TrieNode(true);
-            root.Children.Add('a', bTrieNode);
+            trie.Root.Children.Add('a', bTrieNode);
             bTrieNode.Children.Add('b', cTrieNode);
             cTrieNode.Children.Add('c', endTrieNode);
 
-            return new Trie(root);
+            return trie;
         }
 
         private static Trie Create2()//"abcd"
         {
-            var root = new TrieNode();
+            var trie = new Trie();
             var bTrieNode = new TrieNode();
             var cTrieNode = new TrieNode();
             var dTrieNode = new TrieNode();
             var endTrieNode = new TrieNode(true);
-            root.Children.Add('a', bTrieNode);
+            trie.Root.Children.Add('a', bTrieNode);
             bTrieNode.Children.Add('b', cTrieNode);
             cTrieNode.Children.Add('c', dTrieNode);
             dTrieNode.Children.Add('d', endTrieNode);
 
-            return new Trie(root);
+            return trie;
         }
 
         private static Trie Create3()//"abc","abgl","cd","abcd", "lmn"
         {
-            var root = new TrieNode();
+            var trie = new Trie();
             var bTrieNode = new TrieNode();
             var lTrieNode = new TrieNode();
             var d1TrieNode = new TrieNode();
@@ -73,9 +73,9 @@ namespace TrieNETUnitTestProject
             var endTrieNode3 = new TrieNode(true);
             var endTrieNode4 = new TrieNode(true);
 
-            root.Children.Add('a', bTrieNode);
-            root.Children.Add('c', d1TrieNode);
-            root.Children.Add('l', mTrieNode);
+            trie.Root.Children.Add('a', bTrieNode);
+            trie.Root.Children.Add('c', d1TrieNode);
+            trie.Root.Children.Add('l', mTrieNode);
             bTrieNode.Children.Add('b', cgTrieNode);
             cgTrieNode.Children.Add('c', d2TrieNode);
             cgTrieNode.Children.Add('g', lTrieNode);
@@ -88,7 +88,7 @@ namespace TrieNETUnitTestProject
             mTrieNode.Children.Add('m', nTrieNode);
             nTrieNode.Children.Add('n', endTrieNode4);
 
-            return new Trie(root);
+            return trie;
         }
     }
 }
