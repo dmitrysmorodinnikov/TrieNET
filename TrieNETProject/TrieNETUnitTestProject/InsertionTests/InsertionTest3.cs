@@ -5,7 +5,7 @@ using TrieNETProject;
 namespace TrieNETUnitTestProject
 {
     [TestClass]
-    public class InsertionTest1
+    public class InsertionTest3
     {
         private Trie DesiredTrie;
         private Trie ActualTrie;
@@ -16,13 +16,17 @@ namespace TrieNETUnitTestProject
             var root = new TrieNode();
             ActualTrie = new Trie(root);
             ActualTrie.Add("abc");
+            ActualTrie.Add("abgl");
+            ActualTrie.Add("cdf");
+            ActualTrie.Add("abcd");
+            ActualTrie.Add("lmn");
         }
 
         [TestMethod]
         public void TestMethod1()
         {
             DesiredTrie = TestTries.Get(0);
-            Assert.IsTrue(new TrieNodeEqualityComparer().Equals(DesiredTrie.Root, ActualTrie.Root));
+            Assert.IsFalse(new TrieNodeEqualityComparer().Equals(DesiredTrie.Root, ActualTrie.Root));
         }
 
         [TestMethod]
@@ -36,7 +40,7 @@ namespace TrieNETUnitTestProject
         public void TestMethod3()
         {
             DesiredTrie = TestTries.Get(2);
-            Assert.IsFalse(new TrieNodeEqualityComparer().Equals(DesiredTrie.Root, ActualTrie.Root));
+            Assert.IsTrue(new TrieNodeEqualityComparer().Equals(DesiredTrie.Root, ActualTrie.Root));
         }
     }
 }

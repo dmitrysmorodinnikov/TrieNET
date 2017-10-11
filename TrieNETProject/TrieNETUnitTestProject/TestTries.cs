@@ -52,7 +52,7 @@ namespace TrieNETUnitTestProject
             root.Children.Add('a', bTrieNode);
             bTrieNode.Children.Add('b', cTrieNode);
             cTrieNode.Children.Add('c', dTrieNode);
-            cTrieNode.Children.Add('d', endTrieNode);
+            dTrieNode.Children.Add('d', endTrieNode);
 
             return new Trie(root);
         }
@@ -63,7 +63,7 @@ namespace TrieNETUnitTestProject
             var bTrieNode = new TrieNode();
             var lTrieNode = new TrieNode();
             var d1TrieNode = new TrieNode();
-            var d2TrieNode = new TrieNode();
+            var d2TrieNode = new TrieNode(true);
             var mTrieNode = new TrieNode();
             var nTrieNode = new TrieNode();
             var cgTrieNode = new TrieNode();
