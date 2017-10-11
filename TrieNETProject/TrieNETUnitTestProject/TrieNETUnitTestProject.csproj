@@ -50,6 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ContainsPrefixTests\ContainsPrefixTest3.cs" />
+    <Compile Include="ContainsPrefixTests\ContainsPrefixTest2.cs" />
+    <Compile Include="ContainsPrefixTests\ContainsPrefixTest1.cs" />
     <Compile Include="InsertionTests\InsertionTest3.cs" />
     <Compile Include="InsertionTests\InsertionTest2.cs" />
     <Compile Include="TestTries.cs" />
@@ -63,7 +66,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ContainsPrefixTests\" />
     <Folder Include="ContainsWordTests\" />
   </ItemGroup>
   <Choose>
