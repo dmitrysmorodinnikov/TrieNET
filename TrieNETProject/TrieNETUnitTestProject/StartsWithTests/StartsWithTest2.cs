@@ -1,60 +1,72 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrieNETProject;
+using TrieNET;
 
 namespace TrieNETUnitTestProject
 {
     [TestClass]
-    public class ContainsWordTest1
+    public class StartsWithTest2
     {
         private Trie ActualTrie;
 
         [TestInitialize]
         public void Init()
         {
-            ActualTrie = TestTries.Get(0);
+            ActualTrie = TestTries.Get(1);
         }
 
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.IsFalse(ActualTrie.ContainsWord("a"));
+            Assert.IsTrue(ActualTrie.StartsWith("a"));
         }
 
         [TestMethod]
         public void TestMethod2()
         {
-            Assert.IsFalse(ActualTrie.ContainsWord("ab"));
+            Assert.IsTrue(ActualTrie.StartsWith("ab"));
         }
 
         [TestMethod]
         public void TestMethod3()
         {
-            Assert.IsTrue(ActualTrie.ContainsWord("abc"));
+            Assert.IsTrue(ActualTrie.StartsWith("abc"));
         }
 
         [TestMethod]
         public void TestMethod4()
         {
-            Assert.IsFalse(ActualTrie.ContainsWord("abcd"));
+            Assert.IsTrue(ActualTrie.StartsWith("abcd"));
         }
 
         [TestMethod]
         public void TestMethod5()
         {
-            Assert.IsFalse(ActualTrie.ContainsWord("ak"));
+            Assert.IsFalse(ActualTrie.StartsWith("ak"));
         }
 
         [TestMethod]
         public void TestMethod6()
         {
-            Assert.IsFalse(ActualTrie.ContainsWord("t"));
+            Assert.IsFalse(ActualTrie.StartsWith("t"));
         }
 
         [TestMethod]
         public void TestMethod7()
         {
-            Assert.IsFalse(ActualTrie.ContainsWord("12345"));
+            Assert.IsFalse(ActualTrie.StartsWith("12345"));
+        }
+
+        [TestMethod]
+        public void TestMethod8()
+        {
+            Assert.IsFalse(ActualTrie.StartsWith("abCd"));
+        }
+
+        [TestMethod]
+        public void TestMethod9()
+        {
+            Assert.IsFalse(ActualTrie.StartsWith("abcc"));
         }
     }
 }

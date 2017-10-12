@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrieNETProject;
+using TrieNET;
 
 namespace TrieNETUnitTestProject
 {
     [TestClass]
-    public class ContainsPrefixTest3
+    public class StartsWithTest3
     {
         private Trie ActualTrie;
 
@@ -18,115 +18,115 @@ namespace TrieNETUnitTestProject
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("a"));
+            Assert.IsTrue(ActualTrie.StartsWith("a"));
         }
 
         [TestMethod]
         public void TestMethod2()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("c"));
+            Assert.IsTrue(ActualTrie.StartsWith("c"));
         }
 
         [TestMethod]
         public void TestMethod3()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("l"));
+            Assert.IsTrue(ActualTrie.StartsWith("l"));
         }
 
         [TestMethod]
         public void TestMethod4()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("ab"));
+            Assert.IsTrue(ActualTrie.StartsWith("ab"));
         }
 
         [TestMethod]
         public void TestMethod5()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("abc"));
+            Assert.IsTrue(ActualTrie.StartsWith("abc"));
         }
 
         [TestMethod]
         public void TestMethod6()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("abcd"));
+            Assert.IsTrue(ActualTrie.StartsWith("abcd"));
         }
 
         [TestMethod]
         public void TestMethod7()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("abg"));
+            Assert.IsTrue(ActualTrie.StartsWith("abg"));
         }
 
         [TestMethod]
         public void TestMethod8()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("abgl"));
+            Assert.IsTrue(ActualTrie.StartsWith("abgl"));
         }
 
         [TestMethod]
         public void TestMethod9()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("cd"));
+            Assert.IsTrue(ActualTrie.StartsWith("cd"));
         }
 
         [TestMethod]
         public void TestMethod10()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("cdf"));
+            Assert.IsTrue(ActualTrie.StartsWith("cdf"));
         }
 
         [TestMethod]
         public void TestMethod11()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("lm"));
+            Assert.IsTrue(ActualTrie.StartsWith("lm"));
         }
 
         [TestMethod]
         public void TestMethod12()
         {
-            Assert.IsTrue(ActualTrie.ContainsPrefix("lmn"));
+            Assert.IsTrue(ActualTrie.StartsWith("lmn"));
         }
 
         [TestMethod]
         public void TestMethod13()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("abd"));
+            Assert.IsFalse(ActualTrie.StartsWith("abd"));
         }
 
         [TestMethod]
         public void TestMethod14()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("abgg"));
+            Assert.IsFalse(ActualTrie.StartsWith("abgg"));
         }
 
         [TestMethod]
         public void TestMethod15()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("abcdgd"));
+            Assert.IsFalse(ActualTrie.StartsWith("abcdgd"));
         }
 
         [TestMethod]
         public void TestMethod16()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("dfc"));
+            Assert.IsFalse(ActualTrie.StartsWith("dfc"));
         }
 
         [TestMethod]
         public void TestMethod17()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("lmnp"));
+            Assert.IsFalse(ActualTrie.StartsWith("lmnp"));
         }
 
         [TestMethod]
         public void TestMethod18()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("cb"));
+            Assert.IsFalse(ActualTrie.StartsWith("cb"));
         }
 
         [TestMethod]
         public void TestMethod19()
         {
-            Assert.IsFalse(ActualTrie.ContainsPrefix("ad"));
+            Assert.IsFalse(ActualTrie.StartsWith("ad"));
         }
     }
 }

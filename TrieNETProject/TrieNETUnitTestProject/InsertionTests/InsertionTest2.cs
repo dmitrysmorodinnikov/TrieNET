@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TrieNETProject;
+using TrieNET;
 
 namespace TrieNETUnitTestProject
 {
@@ -14,7 +14,7 @@ namespace TrieNETUnitTestProject
         public void Init()
         {
             ActualTrie = new Trie();
-            ActualTrie.Add("abcd");
+            ActualTrie.Insert("abcd");
         }
 
         [TestMethod]

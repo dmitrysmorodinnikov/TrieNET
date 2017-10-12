@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TrieNETProject
+﻿namespace TrieNET
 {
     interface ITrie
     {
-        void Add(string word);
-        bool ContainsWord(string word);
-        bool ContainsPrefix(string prefix);
+        void Insert(string word);
+        bool Search(string word);
+        bool StartsWith(string prefix);
     }
 }

@@ -50,12 +50,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ContainsPrefixTests\ContainsPrefixTest3.cs" />
-    <Compile Include="ContainsPrefixTests\ContainsPrefixTest2.cs" />
-    <Compile Include="ContainsPrefixTests\ContainsPrefixTest1.cs" />
-    <Compile Include="ContainsWordTests\ContainsWordTest3.cs" />
-    <Compile Include="ContainsWordTests\ContainsWordTest2.cs" />
-    <Compile Include="ContainsWordTests\ContainsWordTest1.cs" />
+    <Compile Include="StartsWithTests\StartsWithTest3.cs" />
+    <Compile Include="StartsWithTests\StartsWithTest2.cs" />
+    <Compile Include="StartsWithTests\StartsWithTest1.cs" />
+    <Compile Include="SearchTests\SearchTest3.cs" />
+    <Compile Include="SearchTests\SearchTest2.cs" />
+    <Compile Include="SearchTests\SearchTest1.cs" />
     <Compile Include="InsertionTests\InsertionTest3.cs" />
     <Compile Include="InsertionTests\InsertionTest2.cs" />
     <Compile Include="TestTries.cs" />

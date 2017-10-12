@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TrieNETProject
+﻿namespace TrieNET
 {
     public class Trie : ITrie
     {
@@ -15,12 +9,7 @@ namespace TrieNETProject
             Root = new TrieNode();
         }
 
-        //public Trie(TrieNode root)
-        //{
-        //    Root = root;
-        //}
-
-        public void Add(string w)
+        public void Insert(string w)
         {
             if (string.IsNullOrEmpty(w))
                 return;
@@ -42,7 +31,7 @@ namespace TrieNETProject
             return trieNode;
         }
 
-        public bool ContainsWord(string word)
+        public bool Search(string word)
         {
             var curr = Root;
             foreach (var ch in word)
@@ -54,7 +43,7 @@ namespace TrieNETProject
             return curr.EndOfWord;
         }
 
-        public bool ContainsPrefix(string prefix)
+        public bool StartsWith(string prefix)
         {
             var curr = Root;
             foreach (var ch in prefix)
